@@ -7,7 +7,7 @@ object BuildPluginsVersion {
 }
 
 object Versions {
-    const val KOTLIN = "1.6.10"
+    const val KOTLIN = "1.9.0"
     const val APP_COMPAT = "1.4.1"
     const val MATERIAL = "1.5.0"
     const val RECYCLER_VIEW = "1.2.1"
@@ -15,7 +15,7 @@ object Versions {
     const val CORE_KTX = "1.7.0"
     const val CORE = "2.1.0"
     const val LIFECYCLE = "2.4.0"
-    const val DAGGER_HILT = "2.38.1"
+    const val DAGGER_HILT = "2.48"
     const val DAGGER_HILT_WORK = "1.0.0"
     const val COROUTINES = "1.5.1"
     const val FIREBASE_COROUTINES = "1.3.9"
@@ -29,7 +29,7 @@ object Versions {
     const val OKHTTP = "4.9.1"
     const val MOSHI = "1.12.0"
     const val LEAK_CANARY = "2.7"
-    const val NAVIGATION = "2.4.0"
+    const val NAVIGATION = "2.7.6"
     const val SWIPE_REFRESH = "1.1.0"
     const val LOTTIE = "3.7.0"
     const val COIL = "1.2.2"

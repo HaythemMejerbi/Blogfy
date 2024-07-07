@@ -17,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
-            android:name=".view.auth.AuthActivity"
+            android:name="com.zlagi.common.AuthActivity"
             android:theme="@style/SplashTheme"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
@@ -29,7 +29,7 @@
         </activity>
 
         <activity
-            android:name=".view.MainActivity"
+            android:name="com.zlagi.common.MainActivity"
             android:theme="@style/Theme.MainBlogfy"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">

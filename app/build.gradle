@@ -10,11 +10,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion SDKConfig.compileSdkVersion
-    buildToolsVersion SDKConfig.buildToolsVersion
+    namespace = SDKConfig.applicationId
+    compileSdk = SDKConfig.compileSdkVersion
 
     defaultConfig {
-        applicationId SDKConfig.applicationId
+        applicationId = SDKConfig.applicationId
         minSdkVersion SDKConfig.minSdkVersion
         targetSdkVersion SDKConfig.targetSdkVersion
         versionCode SDKConfig.versionCode
@@ -29,7 +29,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     packagingOptions {
         exclude "**/attach_hotspot_windows.dll"
         exclude "META-INF/licenses/**"
@@ -44,6 +43,14 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.9.0"
     }
 
     buildFeatures {
@@ -62,6 +69,13 @@ dependencies {
     implementation project(":presentation")
 
     // Ui
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
+
     implementation Deps.APP_COMPAT
     implementation Deps.RECYCLER_VIEW
     implementation Deps.LOTTIE

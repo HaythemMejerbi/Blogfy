@@ -7,8 +7,8 @@ plugins {
 
 android {
 
-    compileSdkVersion SDKConfig.compileSdkVersion
-    buildToolsVersion SDKConfig.buildToolsVersion
+    namespace = SDKConfig.applicationId
+    compileSdk = SDKConfig.compileSdkVersion
 
     defaultConfig {
         minSdkVersion SDKConfig.minSdkVersion
@@ -54,16 +54,21 @@ dependencies {
 
     // Test
     testImplementation UnitTestDeps.JUNIT
+    androidTestImplementation UnitTestDeps.JUNIT
     // Flow - testing
     testImplementation UnitTestDeps.TURBINE
+    androidTestImplementation UnitTestDeps.TURBINE
     // testImplementation for pure JVM unit tests
     testImplementation UnitTestDeps.COROUTINES_TEST
     // Hilt - testing
     testImplementation UnitTestDeps.HILT_TEST
+    androidTestImplementation UnitTestDeps.HILT_TEST
     // Truth
     testImplementation UnitTestDeps.TRUTH
+    androidTestImplementation UnitTestDeps.TRUTH
     // Worker
     testImplementation UnitTestDeps.WORKER_TEST
     // For small test - large test annotations
     testImplementation UnitTestDeps.RUNNER
+    androidTestImplementation UnitTestDeps.RUNNER
 }
